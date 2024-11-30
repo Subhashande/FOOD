@@ -1,0 +1,304 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ASC foods</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content=""/>
+  <style>
+    *{
+        margin: 0px;
+        font-size: Arial;
+        border: border-box;
+    }
+    .nav{
+        height: 50px;
+        background-color: #F6F9F1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .one{
+        height: 400px;
+        background-image: url('{%static "images/food.jpg"%}');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #quo{
+        padding-left: 380px;
+        padding-top: 100px;
+        color: #0000ff;
+        font-size: 25px;
+        font-weight: 700;
+        font-family: Berkshire Swash;
+    }
+    .hom{
+        width: 60%;
+        padding-left: 0px;
+    }
+    .hom a{
+        color: #0000ff;
+    }
+    .log a{
+        margin-left: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        color: #0000ff;
+    }
+    .shop{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .shop1{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 25px;
+    }
+    .sun{
+        height: 180px;
+        width: 30%;
+        /* border: 2px solid black; */
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 2px 3px 3px 3px #888888;
+    }
+    .dish{
+        margin-top: 10px;
+        margin-left: 0px;
+        font-weight: 1000;
+        color: rgb(85, 26, 139);
+        font-size: 30px;
+    }
+    .box1{
+        background-image: url('{% static "images/chicken.jpg"%}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+    .curry{
+        position: absolute;
+        bottom: 12px;
+        color: white;
+        transition: all 0.3s;
+    }
+    .box1:hover .curry{
+        bottom: 20px;
+        left: 10px;
+        font-size: 20px;
+    }
+    .box1:hover{
+        filter: brightness(0.6);
+    }
+    .box2{
+        background-image: url('{% static "images/mutton.avif"%}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .box2:hover .curry{
+        bottom: 20px;
+        left: 10px;
+        font-size: 20px;
+    }
+    .box2:hover{
+        filter: brightness(0.6);
+    }
+    .box3{
+        background-image: url('{% static "images/fish.jpg"%}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .box3:hover .curry{
+        bottom: 20px;
+        left: 10px;
+        font-size: 20px;
+    }
+    .box3:hover{
+        filter: brightness(0.6);
+    }
+    .box4{
+        background-image: url('{% static "images/bir.jpg"%}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .box4:hover .curry{
+        bottom: 20px;
+        left: 10px;
+        font-size: 20px;
+    }
+    .box4:hover{
+        filter: brightness(0.6);
+    }
+    .box5{
+        background-image: url('{% static "images/ASC_bir.jpg"%}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .box5:hover .curry{
+        bottom: 20px;
+        left: 10px;
+        font-size: 20px;
+    }
+    .box5:hover{
+        filter: brightness(0.6);
+    }
+    .box6{
+        background-image: url('{% static "images/bamb.webp"%}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .box6:hover .curry{
+        bottom: 20px;
+        left: 10px;
+        font-size: 20px;
+    }
+    .box6:hover{
+        filter: brightness(0.6);
+    }
+    .box7{
+        background-image: url('{% static "images/swe.avif"%}');
+        background-size: cover;
+    }
+    .box7:hover .curry{
+        bottom: 20px;
+        left: 10px;
+        font-size: 20px;
+    }
+    .box7:hover{
+        filter: brightness(0.6);
+    }
+    .box8{
+        background-image: url('{% static "images/rose.avif"%}');
+        background-size: cover;
+    }
+    .box8:hover .curry{
+        bottom: 20px;
+        left: 10px;
+        font-size: 20px;
+    }
+    .box8:hover{
+        filter: brightness(0.6);
+    }
+    .box9{
+        background-image: url('{% static "images/kaja.jpeg"%}');
+        background-size: cover;
+    }
+    .box9:hover .curry{
+        bottom: 20px;
+        left: 10px;
+        font-size: 20px;
+    }
+    .box9:hover{
+        filter: brightness(0.6);
+    }
+    .last{
+        height: 50px;
+        background-color: #1c2331;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+    }
+    .sub{
+        height: 50px;
+        background-color: #0f1111;
+        padding-left: 450px;
+        padding-top: 10px;
+        color: white;
+        font-size: 20px;
+    }
+    .last a{
+        color: white;
+        padding-left: 10px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header class="nav">
+    <div class="hom">
+    <a href=""><i class="fa-solid fa-bowl-food">ASC<sub>foods</sub></i></a>
+    </div>
+    <div class="log">
+        <a href="">Contact</a>
+        <a href="{% url 'login'%}">Login</a>
+        <a href="{% url 'register'%}">Register</a>
+    </div>
+  </header>
+  <div class="one">
+    <div id="quo">
+    <h2>Order your food and Reserve your Table</h2>
+    <h3>ASC always offers <sub>A taste of excellence in every bite</sub></h3>
+    </div>
+  </div>
+  <p class="dish">Most Famous Dishes</p>
+  <div class="shop">
+    <div class="box1 sun">
+        <div class="curry">
+            <b>Chicken Curry</b>
+        </div>
+    </div>
+    <div class="box2 sun"> 
+        <div class="curry">
+            <b>Mutton Curry</b>
+        </div>   
+    </div>
+    <div class="box3 sun">
+        <div class="curry">
+            <b>Pulasa Fish Curry</b>
+        </div>    
+    </div>
+</div>
+<div class="shop1">
+    <div class="box4 sun">
+        <div class="curry">
+            <b>Ulavacharu Biryani</b>
+        </div>  
+    </div>
+    <div class="box5 sun">  
+        <div class="curry">
+            <b>ASC Special Biryani</b>
+        </div>    
+    </div>
+    <div class="box6 sun">
+        <div class="curry">
+            <b>Bamboo Chicken</b>
+        </div>  
+    </div>
+</div>
+<p class="dish">Most Famous Desserts</p>
+<div class="shop">
+    <div class="box7 sun">
+        <div class="curry">
+            <b>Capricorn Delight</b>
+        </div>  
+    </div>
+    <div class="box8 sun">
+        <div class="curry">
+            <b>Rose milk/Samiya</b>
+        </div>     
+    </div>
+    <div class="box9 sun">
+        <div class="curry">
+            <b>Gottam Kaja</b>
+        </div> 
+    </div>
+</div>
+<div class="last">
+    <p>Contact Us at: <i class="fa-solid fa-phone"></i>9381701055</p>
+    <p>Follow us on: <a href=""><i class="fa-brands fa-instagram"></i></a><a href=""><i class="fa-brands fa-whatsapp"></i></a><a href=""><i class="fa-brands fa-facebook"></i></a></p>
+</div>
+<footer class="sub">
+    <p>Restraunt © all rights reserved</p>
+</footer>
+</body>
+</html>

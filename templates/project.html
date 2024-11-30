@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ASC Foods</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    *{
+        margin: 0px;
+        font-size: Arial;
+        border: border-box;
+    }
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    .image{
+        background-image: url('{% static "images/food.jpg"%}');
+        background-size: cover;
+        height: 740px;
+        width: 100%;
+        filter: brightness(0.6);
+    }
+    .navbar{
+        width: 100%;
+        height: 50px;
+        background-color: rgba(0,0,0,0.8);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .navbar a{
+        color: white;
+        text-decoration: none;
+    }
+    .table{
+        border: 1.5px solid #cda45e;
+        border-radius: 9px;
+        height: 20px;
+        padding-top: 6px;
+    }
+    .theory{
+        color: rgb(255,255,255);
+        font-family: Poppins, sans-serif;
+        font-weight: 700;
+        font-size: 25px;
+        margin-top: 290px;
+        padding-left: 50px;
+    }
+    .theory span{
+        color: #cda45e;
+    }
+    .opt{
+        color: white;
+        font-size: 20px;
+        display: flex;
+        padding-left: 50px;
+        margin-top: 15px;
+    }
+    .opt a{
+        margin-left: 40px;
+        font-weight: 600;
+        padding-top: 2px;
+        text-decoration: none;
+        color: white;
+    }
+    .table:hover{
+        background-color: #cda45e;
+    }
+    .second{
+        height: 710px;
+        background-image: url('{% static "images/interior1.jpg"%}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #second{
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+    <div class="image">
+    <header class="navbar">
+        <div class="hom">
+            <a href=""><i class="fa-solid fa-bowl-food">ASC<sub>foods</sub></i></a>
+        </div>
+        <a href="">About</a>
+        <a href="">Menu</a>
+        <a href="">Specials</a>
+        <a href="">Events</a>
+        <a href="">Chefs</a>
+        <a href="">Gallery</a>
+        <a href="">Contact</a>
+        <a class="table"href="{% url 'table' %}">Book a Table</a>
+        <a href="">Profile</a>
+    </header>
+    <div class="theory">
+        <h1>Welcome To <span>ASC Restaurant</span></h1>
+        <p>Delivering the tasty food from 12 years</p>
+    </div>
+    <div class="opt">
+        <a href="{% url 'menu' %}" class="table">Our Menu</a>
+        <a href="{% url 'table' %}" class="table">Book a Table</a>
+    </div>
+</div>
+<div class="second">
+    <div id="second">
+
+    </div>
+</div>
+</body>
+</html>

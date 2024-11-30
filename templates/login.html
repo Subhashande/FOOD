@@ -1,0 +1,55 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <style>
+    body{
+        background-image: url('{% static "images/login.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .my_log{
+        border: 1.5px solid;
+        height: 300px;
+        width: 50%;
+        margin: 150px 0px 0px 300px;
+        border-radius: 20px;
+        box-shadow: 2px 3px 3px 3px black;
+    }
+    .my_log h2{
+        padding-left: 180px;
+    }
+    .per{
+        margin: 40px 0px 0px 180px;
+    }
+    .for input{
+        width: 260px;
+    }
+    #but{
+        width: 80px;
+        margin-left: 50px;
+    }
+  </style>
+</head>
+<body>
+    <div class="my_log">
+  <h2>Login to ASC Foods</h2>
+    <div class="per">
+  <form method="POST" class="for">
+    {% csrf_token %}
+    <label>UserName:</label><br>
+    <input type="text" name="username" required/><br><br>
+    <label>Password:</label><br>
+    <input type="password" name="password" required/><br>
+    <p>Don't have an account?<a id="se" href="{% url 'register' %}">Signup</a></p>
+    <input id="but" type="submit" value="Login"/>
+  </form>
+    </div>  
+    </div>
+</body>
+</html>
